@@ -1,0 +1,119 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 15px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #1e3c72;
+  margin-bottom: 22px;
+  font-size: 1.8rem;
+}
+
+.input-row { display: flex; gap: 10px; }
+
+#taskInput {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 2px solid #d0d7e5;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#taskInput:focus { border-color: #2a5298; }
+
+.add-btn {
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #2a5298;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.add-btn:hover { background: #1e3c72; transform: translateY(-2px); }
+
+.message {
+  min-height: 20px;
+  margin: 8px 0;
+  font-size: 0.9rem;
+  color: #d63031;
+}
+
+.task-list { list-style: none; }
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  background: #f4f6fb;
+  border-left: 5px solid #2a5298;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.task-item:hover { background: #e8edf8; }
+
+.task-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #27ae60;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 1.05rem;
+  color: #2d3436;
+  word-break: break-word;
+  cursor: pointer;
+}
+
+/* Completed task style */
+.task-item.completed { border-left-color: #27ae60; }
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #95a5a6;
+}
+
+.delete-btn {
+  padding: 7px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: #e74c3c;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.delete-btn:hover { background: #c0392b; transform: translateY(-2px); }
+
+.counter {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #636e72;
+}
